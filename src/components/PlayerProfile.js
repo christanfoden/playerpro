@@ -2,8 +2,16 @@ import React, { Component } from 'react';
 import './PlayerProfile.css';
 
 class PlayerProfile extends Component {
+  // constructor(props) {
+  //   super();
+  //   this.state = [{null}]
+  // }
 
   componentDidMount() {
+  }
+
+  showDescription = () => {
+    this.setState();
   }
 
   render() {
@@ -14,7 +22,11 @@ class PlayerProfile extends Component {
       <div className="card-body">
         <div className="row">
           <div className="col-sm-12">
-              <img className='card-img-top' src={this.props.playerImgUrl} />
+              <img
+                className='card-img-top'
+                onClick={() => this.showDescription()}
+                src={this.props.playerImgUrl}
+              />
               <div className='playerTitle'>
                   <h5>{this.props.playerFirstName} {this.props.playerLastName}</h5>
               </div>
@@ -26,9 +38,9 @@ class PlayerProfile extends Component {
                 <li><span><i className="icon-signal"></i>Weight:</span> {this.props.playerWeightKg} Kgs</li>
               </ul>
               {/* <p className="card-text">{this.props.PlayerDescription}</p> */}
-              {/* <div className="embed-responsive embed-responsive-16by9">
+              <div className="embed-responsive embed-responsive-16by9">
                 <iframe className="embed-responsive-item" src={this.props.PlayerVideoUrl} allowfullscreen></iframe>
-              </div> */}
+              </div>
               {/* <div className="col-sm-8">
               </div> */}
           </div>

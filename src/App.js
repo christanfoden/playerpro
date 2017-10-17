@@ -36,6 +36,11 @@ class App extends Component {
           <div className="row playerCards">
             {PlayersList}
           </div>
+          {/* <nav className="navbar fixed-bottom navbar-light bg-dark">
+            <a className="navbar-brand" href="#">Players</a>
+            <a className="navbar-brand" href="#">Players</a>
+            <a className="navbar-brand" href="#">Players</a>
+          </nav> */}
         </div>
     </div>
     );
