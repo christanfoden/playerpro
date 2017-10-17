@@ -31,11 +31,11 @@ class PlayerProfile extends Component {
                   <h5>{this.props.playerFirstName} {this.props.playerLastName}</h5>
               </div>
               <ul className="portfolio-meta bottommargin">
-                <li><span><i className="icon-calendar3"></i>Age:</span> {this.props.playerAge}</li>
-                <li><span><i className="icon-lightbulb"></i>Position:</span> {this.props.playerPosition}</li>
-                <li><span><i className="icon-link"></i>Club:</span> {this.props.playerClubCurrent}</li>
-                <li><span><i className="icon-signal"></i>Height:</span> {this.props.playerHeightCms} Cm</li>
-                <li><span><i className="icon-signal"></i>Weight:</span> {this.props.playerWeightKg} Kgs</li>
+                <li><span>Age:</span> {this.props.playerAge}</li>
+                <li><span>Position:</span> {this.props.playerPosition}</li>
+                <li><span>Club:</span> {this.props.playerClubCurrent}</li>
+                <li><span>Height:</span> {this.props.playerHeightCms} Cm</li>
+                <li><span>Weight:</span> {this.props.playerWeightKg} Kgs</li>
               </ul>
               {/* <p className="card-text">{this.props.PlayerDescription}</p> */}
               <div className="embed-responsive embed-responsive-16by9">
