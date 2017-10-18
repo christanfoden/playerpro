@@ -13,6 +13,12 @@
 .playerTitle {
   margin: 5px;
   text-align: center;
+  color: #f8f8f8;
+  justify-content: center;
+  background-color: #FB3053;
+  border-radius: 7px;
+  padding-top: 10px;
+  padding-bottom: 1px;
 }
 
 .card-img-top {
@@ -33,6 +39,8 @@
 
 .card-text {
   padding-top: 10px;
+  font-size: 12px;
+  text-align: justify;
 }
 
 ul {
@@ -41,4 +49,12 @@ ul {
 
 ul li {
   font-size: 12px;
+}
+
+.btn {
+  width: 280px;
+}
+
+hr {
+  background-color: grey;
 }

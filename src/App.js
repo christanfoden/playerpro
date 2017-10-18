@@ -21,6 +21,7 @@ class App extends Component {
       playerPosition={player.playerPosition}
       playerHeightCms={player.playerHeightCms}
       playerWeightKg={player.playerWeightKg}
+      playerCountry={player.playerCountry}
     />
   );
 
