@@ -1,49 +1,56 @@
 import React, { Component } from 'react';
 import './App.css';
 import PlayerProfile from './components/PlayerProfile';
-import PlayerList from './components/PlayerList';
+import PlayerCardSmall from './components/PlayerCardSmall';
+import FullPlayerInfo from './components/FullPlayerInfo';
 
-var data = require('./tmgPlayers.json');
+import Header from './components/Header';
+
+FullPlayerInfo
 
 class App extends Component {
 
-  render() {
-    const PlayersList = data.map((player) =>
-    <PlayerProfile
-      id={player.playerId}
-      playerFirstName={player.playerFirstName}
-      playerLastName={player.playerLastName}
-      PlayerDescription={player.PlayerDescription}
-      PlayerVideoUrl={player.PlayerVideoUrl}
-      playerImgUrl={player.playerImgUrl}
-      playerAge={player.playerAge}
-      playerClubCurrent={player.playerClubCurrent}
-      playerPosition={player.playerPosition}
-      playerHeightCms={player.playerHeightCms}
-      playerWeightKg={player.playerWeightKg}
-      playerCountry={player.playerCountry}
-    />
-  );
+  constructor(){
+    super();
+    this.state = {
+      playerData: []
+    }
+  }
 
-    console.log(data);
+  getPlayer() {
+    return fetch('https://tmgfootball-a704b.firebaseio.com/.json')
+      .then((response) => response.json())
+      .then((responseJson) => {
+        this.setState({ playerData: responseJson });
+      })
+      .catch((error) => {
+        console.error(error);
+      })
+  }
+
+  componentWillMount() {
+    this.getPlayer();
+  }
+
+  render() {
+
+    console.log(this.state);
     return (
-      <div className="App">
-        {/* <header className="App-header" /> */}
-        <header className="App-header band">
-          {/* <h1>Dashboard</h1> */}
-        </header>
-        {/* <header className="App-header" /> */}
-        <div className="row playerRow">
-          <div className="row playerCards">
-            {PlayersList}
-          </div>
-          {/* <nav className="navbar fixed-bottom navbar-light bg-dark">
-            <a className="navbar-brand" href="#">Players</a>
-            <a className="navbar-brand" href="#">Players</a>
-            <a className="navbar-brand" href="#">Players</a>
-          </nav> */}
+      <div className="Container-fluid">
+        <div className="Card Header">
+            <Header />
         </div>
-    </div>
+        <div className="Card">
+          <div className="row">
+            <div className="Card col-sm-4 selector">
+              <PlayerCardSmall data={this.state.playerData} />
+            </div>
+            <div className="Card col-sm-8 selector1">
+              <FullPlayerInfo data={this.state.playerData} />
+            </div>
+          </div>
+        </div>
+      </div>
     );
   }
 }

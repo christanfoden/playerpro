@@ -22,7 +22,7 @@ function writePlayersData(
   firebase.database().ref('players/' + playerId).set({
     playerId: 001,
     playerFirstName: 'SEBASTIAN',
-    playerLastName:  
+    playerLastName: '',
     playerCountry,
     playerBirthDate,
     playerAge,

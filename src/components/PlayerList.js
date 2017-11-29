@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './PlayerList.css';
-import '../tmgPlayers.json';
+// import '../tmgPlayers.json';
 
 var data = require('../tmgPlayers.json');
 

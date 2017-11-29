@@ -1,0 +1,14 @@
+.Fullplayer {
+  width: auto;
+}
+
+.FullImg {
+  width: 200px;
+  height: auto;
+  border-radius: .5rem;
+  margin: 1rem;
+}
+
+.titleOfPlayer {
+  margin: 1rem;
+}

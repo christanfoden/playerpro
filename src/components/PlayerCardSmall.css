@@ -1,0 +1,13 @@
+.smallImg {
+  height: 47px;
+  width: 64px;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.player {
+  height: 50px;
+  padding: 0px;
+  margin: 10px;
+  width: 100%;
+}
